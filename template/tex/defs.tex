@@ -1,0 +1,136 @@
+% !TEX root = ../top.tex
+% !TEX spellcheck = en-US
+
+
+\definecolor{olive}{RGB}{50,150,50}
+
+\newif\ifdraft
+\drafttrue
+
+% project specific, replace!
+\newcommand{\netL}{{\it LayerNet}}
+\newcommand{\netK}{{\it PiCNet}}
+\newcommand{\netU}{{\it KeypointNet}}
+\newcommand{\lost}{{\it LostGAN}}
+
+\newcommand{\hA}{{\it ScaleHeuristic}}
+\newcommand{\hB}{{\it OverlapHeuristic}}
+
+\newcommand{\soft}{{\it soft-occlusion}}
+\newcommand{\lsoft}{{\it local-soft-occlusion}}
+
+\newcommand{\ST}{\mathcal{T}}
+\newcommand{\SST}{\mathcal{T}_S}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Seg}{\mathbf{S}} % geometric part
+\newcommand{\Latent}{\mathbf{L}}
+\newcommand{\LatentG}{\Latent^{\text{3D}}} % geometric part
+\newcommand{\LatentA}{\Latent^\text{app}} % appearance part
+\newcommand{\LatentBG}{\mB} % appearance part
+
+\newcommand{\dA}{{A}}
+\newcommand{\dB}{{B}}
+
+% user specific comments
+\newcommand{\HR}[1]{{\color{blue}{\bf helge: #1}}}
+\newcommand{\hr}[1]{{\color{blue} #1}}
+\newcommand{\XY}[1]{{\color{blue}{\bf xy: #1}}}
+\newcommand{\xy}[1]{{\color{blue} #1}}
+
+% general commands
+\newcommand{\TODO}[1]{\textcolor{red}{TODO: #1}}
+\newcommand{\NEW}[1]{{\color{cyan}{#1}}}
+\newcommand{\comment}[1]{}
+
+% sections
+\newcommand{\app}{appendix} % supplemental document
+\newcommand{\parag}[1]{{\bf{#1}}}
+
+% common math functions
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\smoothstep}{smooth-step}
+
+% vectors and matrix notation
+\newcommand{\va}{\mathbf{a}}
+\newcommand{\vb}{\mathbf{b}}
+%\newcommand{\vc}{\mathbf{c}}
+\newcommand{\vd}{\mathbf{d}}
+\newcommand{\ve}{\mathbf{e}}
+\newcommand{\vf}{\mathbf{f}}
+\newcommand{\vg}{\mathbf{g}}
+\newcommand{\vh}{\mathbf{h}}
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\vl}{\mathbf{l}}
+\newcommand{\vm}{\mathbf{m}}
+\newcommand{\vn}{\mathbf{n}}
+\newcommand{\vo}{\mathbf{o}}
+\newcommand{\vp}{\mathbf{p}}
+\newcommand{\vq}{\mathbf{q}}
+\newcommand{\vr}{\mathbf{r}}
+%\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vt}{\mathbf{t}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vz}{\mathbf{z}}
+
+\newcommand{\mA}{\mathbf{A}}
+\newcommand{\mB}{\mathbf{B}}
+\newcommand{\mC}{\mathbf{C}}
+\newcommand{\mD}{\mathbf{D}}
+\newcommand{\mE}{\mathbf{E}}
+\newcommand{\mF}{\mathbf{F}}
+\newcommand{\mG}{\mathbf{G}}
+\newcommand{\mH}{\mathbf{H}}
+\newcommand{\mI}{\mathbf{I}}
+\newcommand{\mJ}{\mathbf{J}}
+\newcommand{\mK}{\mathbf{K}}
+\newcommand{\mL}{\mathbf{L}}
+\newcommand{\mM}{\mathbf{M}}
+\newcommand{\mN}{\mathbf{N}}
+\newcommand{\mO}{\mathbf{O}}
+\newcommand{\mP}{\mathbf{P}}
+\newcommand{\mQ}{\mathbf{Q}}
+\newcommand{\mR}{\mathbf{R}}
+\newcommand{\mS}{\mathbf{S}}
+\newcommand{\mT}{\mathbf{T}}
+\newcommand{\mU}{\mathbf{U}}
+\newcommand{\mV}{\mathbf{V}}
+\newcommand{\mW}{\mathbf{W}}
+\newcommand{\mX}{\mathbf{X}}
+\newcommand{\mY}{\mathbf{Y}}
+\newcommand{\mZ}{\mathbf{Z}}
+
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cI}{\mathcal I}
+\newcommand{\cJ}{\mathcal J}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\cW}{\mathcal W}
+\newcommand{\cX}{\mathcal X}
+\newcommand{\cY}{\mathcal Y}
+\newcommand{\cZ}{\mathcal Z}
+
+
