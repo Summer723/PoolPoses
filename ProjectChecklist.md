@@ -1,9 +1,9 @@
-# To-Do List
+# To-Do List(Week of Mar 6th)
 
- - [ ] Related work Section
-     * summary of transformer, Vit and Vitposes
+ - [ ] Related Work Section
+     * summary of Transformer, ViT and ViTposes
     
- - [ ] Model Architecture and training
+ - [ ] Model Architecture and Training
      * remove the last layer of pretrained model 
      * add decoder to the end of backbone
      * train on COCO dataset
