@@ -1,9 +1,13 @@
 # To-Do List
 
- - [x] Related work Section
-     * problem definition
-     * related work
-     * what challenges do you expect?
+ - [] Related work Section
+     * summary of transformer, Vit and Vitposes
+    
+ - [] Model Architecture and training
+     * remove the last layer of pretrained model 
+     * add decoder to the end of backbone
+     * train on COCO dataset
+
 
 
 
