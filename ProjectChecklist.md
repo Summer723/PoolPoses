@@ -1,9 +1,10 @@
 # To-Do List
 
-- [] Related work section 
-- [] Model Architecture
-- []
-- 
+ - [x] Related work Section
+     * problem definition
+     * related work
+     * what challenges do you expect?
+
 
 
 
