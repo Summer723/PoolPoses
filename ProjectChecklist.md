@@ -1,3 +1,12 @@
+# To-Do List
+
+- [] Related work section 
+- [] Model Architecture
+- []
+- 
+
+
+
 # Project Preparation Checklist
 
  - [x] Describe a well-defined problem. State concrete steps to proceed instead of vague ideas.
