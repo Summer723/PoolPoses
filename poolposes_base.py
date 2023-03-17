@@ -29,7 +29,6 @@ class deconv_decoder(torch.nn.Module):
         self.relu = nn.ReLU()
         self.conv = nn.Conv2d(96,17, 1)
         
-
     def forward(self, x):
         x = self.deconv1(x)
         x = self.bn1(x)
@@ -44,7 +43,6 @@ class deconv_decoder(torch.nn.Module):
         return x
         
     
-    
 class Backbone(PoolFormer):
     def __init__(self, **kwargs):
         layers = [8, 8, 24, 8]
@@ -56,7 +54,7 @@ class Backbone(PoolFormer):
             mlp_ratios=mlp_ratios, downsamples=downsamples, 
             layer_scale_init_value=1e-6, 
             **kwargs)   
-    
+  
     def forward(self, x):
         # input embedding
         x = self.forward_embeddings(x)
@@ -65,7 +63,8 @@ class Backbone(PoolFormer):
         x = self.norm(x)
         return x
     
-class myModel(nn.Module):
+
+class PoolPoses(nn.Module):
     def __init__(self):
         super().__init__()
         model = Backbone()
